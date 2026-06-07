@@ -9,6 +9,9 @@ const daysElem = document.querySelector('[data-days]');
 const hoursElem = document.querySelector('[data-hours]');
 const minutesElem = document.querySelector('[data-minutes]');
 const secondsElem = document.querySelector('[data-seconds]');
+if (startBtn) {
+    startBtn.disabled = true;
+}
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -16,7 +19,7 @@ const options = {
   minuteIncrement: 1,
     onClose(selectedDates) {
         const currentDate = Date.now();
-        if (selectedDates[0] < currentDate) {
+        if (selectedDates[0] <= currentDate) {
             iziToast.error({
             message: 'Please choose a date in the future',
             position: "topRight",
@@ -45,7 +48,7 @@ startBtn.addEventListener('click', () => {
         const currentTime = new Date();
         const msDifference = userSelectedDate.getTime() - currentTime;
         if (msDifference <= 0) {
-            clearInterval(intervalIdId);
+            clearInterval(intervalId);
             dataSelector.disabled = false;
             return;
         }
