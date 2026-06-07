@@ -135,11 +135,11 @@ fieldset label {
   height: 20px;
   cursor: pointer;
 }
-/* label {
+label {
   display: flex;
   flex-direction: column;
   text-align: start;
-} */
+}
 .number-input {
   width: 360px;
 }

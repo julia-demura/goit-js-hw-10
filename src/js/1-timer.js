@@ -75,10 +75,3 @@ function convertMs(ms) {
     return { days, hours, minutes, seconds };
 
 }
-// function addLeadingZero(value) {
-//     const paddedDays = String(day)
-//     const paddedHours = String(hour).padStart(2, '0');
-//     const paddedMinutes = String(minute).padStart(2, '0');
-//     const paddedSeconds = String(second).padStart(2, '0');
-//     return `${paddedDays}:${paddedHours}:${paddedMinutes}:${paddedSeconds}`;
-// }
